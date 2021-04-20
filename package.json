@@ -20,6 +20,7 @@
   },
   "scripts": {
     "clean": "rimraf dist build",
+    "start": "npm-run-all clean -p dev:* --print-label",
 
     "dev": "npm-run-all clean -p dev:* --print-label",
     "dev:postcss": "NODE_ENV=development postcss src/styles/main.css -o dist/styles/main.css -w",
