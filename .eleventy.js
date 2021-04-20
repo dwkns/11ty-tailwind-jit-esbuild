@@ -3,11 +3,15 @@ const production = process.env.NODE_ENV === `production` // true when NODE_ENV i
 
 module.exports = (eleventyConfig) => {
 
-  // ensure we refresh the browser when scripts, styles or the tailwind config changes.
-  eleventyConfig.addWatchTarget("./src/scripts/");
-  eleventyConfig.addWatchTarget("./src/styles/");
-  eleventyConfig.addWatchTarget("./tailwind.config.js");
+  // detect changes in the output folder and reload browser
+  eleventyConfig.setBrowserSyncConfig({
+    files: ['dist/**/*'],
+    open: true,
+  });
 
+  // watch our script folder for changes. 
+  eleventyConfig.addWatchTarget("./src/scripts/");
+  
   // use esbuild to compile our JavaScript
   eleventyConfig.on("beforeBuild", () => {
     build({
