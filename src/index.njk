@@ -1,5 +1,5 @@
 ---
-title: Page title
+title: ---project-name---
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +13,11 @@ title: Page title
 </head>
 
 <body>
-  <section class="bg-brand-red flex items-center justify-center py-12">
+  <section class="bg-brand-red flex flex-col items-center justify-center py-12">
     <button id="button" class="bg-yellow-300 px-4 py-2 rounded-lg h-12">
       <span role="img" aria-label="confetti ball">🎊 Fire the confetti</span>
     </button>
+    <p class="mt-12">{{title}}</p>
   </section>
   <section class="bg-yellow-200 flex items-center justify-center py-12">
     <canvas id="canvas" width="800" height="400"></canvas>
