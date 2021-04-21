@@ -1,28 +1,15 @@
 ---
-title: ---project-name---
+title: u2pt2
+layout: _main.njk
 ---
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}}</title>
-  <link rel="stylesheet" href="styles/main.css">
-</head>
+<section class="bg-brand-red flex flex-col items-center justify-center py-12">
+  <button id="button" class="bg-yellow-300 px-4 py-2 rounded-lg h-12">
+    <span role="img" aria-label="confetti ball">🎊 Fire the confetti</span>
+  </button>
+  <p class="mt-12">{{title}}</p>
+</section>
 
-<body>
-  <section class="bg-brand-red flex flex-col items-center justify-center py-12">
-    <button id="button" class="bg-yellow-300 px-4 py-2 rounded-lg h-12">
-      <span role="img" aria-label="confetti ball">🎊 Fire the confetti</span>
-    </button>
-    <p class="mt-12">{{title}}</p>
-  </section>
-  <section class="bg-yellow-200 flex items-center justify-center py-12">
-    <canvas id="canvas" width="800" height="400"></canvas>
-  </section>
-  <script src="scripts/main.js"></script>
-</body>
-
-</html>
+<section class="bg-yellow-200 flex items-center justify-center py-12">
+  <canvas id="canvas" width="800" height="400"></canvas>
+</section>

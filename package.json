@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "alpinejs": "^2.8.2",
     "autoprefixer": "^10.2.5",
     "canvas-confetti": "^1.4.0",
     "cssnano": "^5.0.1",
@@ -21,11 +22,9 @@
   "scripts": {
     "clean": "rimraf dist build",
     "start": "npm-run-all clean -p dev:* --print-label",
-
     "dev": "npm-run-all clean -p dev:* --print-label",
     "dev:postcss": "NODE_ENV=development postcss src/styles/main.css -o dist/styles/main.css -w",
     "dev:eleventy": "eleventy --serve",
-    
     "build": "npm-run-all clean -p build:*",
     "build:eleventy": "NODE_ENV=production eleventy",
     "build:postcss": "TAILWIND_MODE=build NODE_ENV=production postcss src/styles/main.css -o dist/styles/main.css"

@@ -1,3 +1,4 @@
+import "alpinejs";
 import confetti from 'canvas-confetti';
 
 const fireworks = () =>

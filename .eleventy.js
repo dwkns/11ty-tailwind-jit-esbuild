@@ -20,13 +20,22 @@ module.exports = (eleventyConfig) => {
       bundle: true,
       minify: production,
     }).catch(() => process.exit(1));
-
   });
+
+  eleventyConfig.addPassthroughCopy({
+    'src/static': './',
+    'src/images': './images'
+  });
+
+  eleventyConfig.setDataDeepMerge(true);
 
   return {
     dir: {
-      input: "src",
+      input: 'src',
       output: 'dist',
+      includes: '_partials/',
+      layouts: '_partials/_layouts',
+      data: '_data',
     },
   };
 };
