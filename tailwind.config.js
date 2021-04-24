@@ -5,6 +5,7 @@ module.exports = {
   purge: [
     './src/**/*.njk',
     './src/**/*.js',
+    './src/**/*.md',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
