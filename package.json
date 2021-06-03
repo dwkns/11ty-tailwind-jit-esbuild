@@ -1,5 +1,5 @@
 {
-  "name": "11ty-tailwind-jit-esbuild",
+  "name": "u2-staging",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -14,19 +14,21 @@
     "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^2.1.1",
+    "tailwindcss-debug-screens": "^2.0.0"
   },
   "env": {
     "node": true
   },
   "scripts": {
     "clean": "rimraf dist build",
-    "start": "npm-run-all clean -p dev:* --print-label",
-    "dev": "npm-run-all clean -p dev:* --print-label",
+    "start": "npm-run-all clean -p dev:* ",
+    "dev": "npm-run-all clean -p dev:* ",
     "dev:postcss": "NODE_ENV=development postcss src/styles/main.css -o dist/styles/main.css -w",
     "dev:eleventy": "eleventy --serve",
     "build": "npm-run-all clean -p build:*",
     "build:eleventy": "NODE_ENV=production eleventy",
     "build:postcss": "TAILWIND_MODE=build NODE_ENV=production postcss src/styles/main.css -o dist/styles/main.css"
-  }
+  },
+  "author": "dazza"
 }
