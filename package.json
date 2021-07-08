@@ -24,7 +24,7 @@
     "clean": "rimraf dist build",
     "start": "npm-run-all clean -p dev:* ",
     "dev": "npm-run-all clean -p dev:* ",
-    "dev:postcss": "NODE_ENV=development postcss src/styles/main.css -o dist/styles/main.css -w",
+    "dev:postcss": "TAILWIND_MODE=watch NODE_ENV=development postcss src/styles/main.css -o dist/styles/main.css -w",
     "dev:eleventy": "eleventy --serve",
     "build": "npm-run-all clean -p build:*",
     "build:eleventy": "NODE_ENV=production eleventy",
